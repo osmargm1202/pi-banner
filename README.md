@@ -1,8 +1,8 @@
 # pi-banner
 
-ORGM Pi extension package for banner.
+ORGM Pi header/control-plane and banner package.
 
-Status: scaffold only. Agent-status/widgets live in `pi-subagents`.
+Owns the ORGM ASCII header/control-plane commands and keeps a scaffold for future banner/header work. Agent-status/widgets live in `pi-subagents`.
 
 ## Install
 
@@ -36,7 +36,8 @@ Packages:
 
 Produces:
 
-- Future banner/header behavior only. Not agent-status/widgets.
+- ORGM ASCII header and `/orgm-*` control-plane commands.
+- Future banner/header behavior. Not agent-status/widgets.
 
 Consumes:
 

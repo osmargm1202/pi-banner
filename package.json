@@ -23,15 +23,19 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node --test",
+    "test": "node --test test/*.test.mjs test/*.test.ts",
     "pack:check": "npm pack --dry-run"
   },
   "pi": {
     "extensions": [
-      "./extensions/banner.ts"
+      "./extensions/banner.ts",
+      "./extensions/orgm.ts"
     ]
   },
   "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.79.0"
+  },
+  "devDependencies": {
     "@earendil-works/pi-coding-agent": "^0.79.0"
   }
 }
