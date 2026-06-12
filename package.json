@@ -12,16 +12,31 @@
     "url": "https://github.com/osmargm1202/pi-banner/issues"
   },
   "homepage": "https://github.com/osmargm1202/pi-banner#readme",
-  "keywords": ["pi-package", "pi-extension", "orgm", "banner"],
-  "files": ["extensions", "README.md"],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "orgm",
+    "banner"
+  ],
+  "files": [
+    "extensions",
+    "README.md"
+  ],
   "scripts": {
     "test": "node --test",
     "pack:check": "npm pack --dry-run"
   },
   "pi": {
-    "extensions": ["./extensions/banner.ts"]
+    "extensions": [
+      "./extensions/agent-status.ts"
+    ]
   },
   "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "^0.79.0"
+    "@earendil-works/pi-coding-agent": "^0.79.0",
+    "@earendil-works/pi-tui": "^0.79.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.79.1",
+    "@earendil-works/pi-tui": "^0.79.1"
   }
 }
