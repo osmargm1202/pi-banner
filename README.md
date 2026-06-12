@@ -2,7 +2,7 @@
 
 ORGM Pi extension package for banner.
 
-Status: scaffold only. Runtime behavior still lives in `pi-harness` until extraction lands.
+Status: scaffold only. Agent-status/widgets live in `pi-subagents`.
 
 ## Install
 
@@ -28,14 +28,15 @@ Packages:
 
 - `pi-mem`: local memory/context index provider.
 - `pi-caveman`: caveman runtime and shared state events.
-- `pi-harness`: ORGM commands, config, title, ask/todo/banner bridge.
+- `pi-harness`: ORGM bundle/meta-package and compatibility bridge.
 - `pi-footer`: Zentui-based editor/footer UI that displays ORGM status.
+- `pi-subagents`: subagent deployment plus agent-status widgets.
 
 ## Coupled integrations
 
 Produces:
 
-- Future extracted `banner` behavior from `pi-harness`.
+- Future banner/header behavior only. Not agent-status/widgets.
 
 Consumes:
 
@@ -48,7 +49,7 @@ Hard dependencies:
 
 Soft dependencies:
 
-- `pi-harness` remains compatibility owner until extraction completes.
+- `pi-subagents` owns agent-status/widgets.
 - `pi-footer` remains editor/footer UI owner.
 
 ## Development
