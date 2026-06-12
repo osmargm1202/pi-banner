@@ -15,4 +15,5 @@ test("package remains a banner scaffold and does not own agent-status widgets", 
   const orgmSource = readFileSync(new URL("../extensions/orgm.ts", import.meta.url), "utf8");
   assert.match(orgmSource, /orgm-header/);
   assert.match(orgmSource, /orgm-extension/);
+  assert.doesNotMatch(orgmSource, /orgm-init/);
 });

@@ -11,7 +11,7 @@ import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
-import { initializeOrgmConfig, loadOrgmConfig, orgmConfigPath } from "./lib/orgm-config.ts";
+import { loadOrgmConfig } from "./lib/orgm-config.ts";
 import {
 	buildOrgmExtensionCommandCompletions,
 	describeOrgmExtensionStatus,
@@ -357,15 +357,6 @@ export default function (pi: ExtensionAPI) {
 		piMemContextPayload = next;
 		piMemContextKey = nextKey;
 		requestHeaderRender();
-	});
-
-	pi.registerCommand("orgm-init", {
-		description: "Materialize full ~/.pi/agent/orgm.json defaults",
-		handler: async (_args: string, ctx: ExtensionContext) => {
-			const configPath = orgmConfigPath();
-			initializeOrgmConfig(configPath);
-			ctx.ui.notify(`ORGM config initialized: ${configPath}`, "success");
-		},
 	});
 
 	const handleExtensionCommand = async (args: string, ctx: ExtensionContext, usage: string) => {
